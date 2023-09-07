@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<input type="text">
+<div></div>
+
+
+<script>
+    const inputTag = document.querySelector('input');
+    const div = document.querySelector('div');
+
+    inputTag.addEventListener('change',function(e)
+    {
+        console.log(e);
+        // e.target -> 이벤트가 발생한 지점 -> input 태그
+        // e.target.value -> input의 value
+        div.textContent = e.target.value;
+    }  )
+</script>
+
+</body>
+</html>

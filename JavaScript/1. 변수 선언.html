@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>body 태그 닫는 부분 위에 넣기</script> -->
+    <script>
+        console.log("Hello World");
+
+        // var(권장 x) , let, const
+        // int , boolean -> javascript는 위에 명령어로 모든 선언을 한다.
+
+        // var: 함수레벨 스코프(함수 안에 갇힘), 재할당이 가능
+        //var a = 10;
+        //var a = 20;  
+
+        // function hello(){
+        //     var b = 5;
+        // }
+        // hello();
+        // console.log(b); //error!!
+
+        // {}: 블록레벨 스코프
+        // if() {}-> 블록
+        // for()-> 블록
+
+        {
+            var c = 5;
+        }
+        console.log(c);
+
+        //-----------------------------------------------------------------
+        //es6 도입
+        //let, const: 블록레벨 스코프 -> 블록안에 갇혀버림
+        // let: 값이 변하는 변수 -> 재 선언 불가
+        // const: 재할당 x, 재선언 x
+        // let, const: {블록}레벨 스코프
+
+        {
+            let e = 10;
+        }
+        console.log(e);
+
+
+    </script>
+</body>
+</html>

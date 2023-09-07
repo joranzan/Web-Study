@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* text-align, color, font-size 상속 */
+        .container{
+            text-align: center;
+            color: red;
+            border: 3px solid red;
+            width: 200px
+        }
+        /* body에서 box는 container를 상속받음 */
+        .box{
+            border: 3px solid black;
+            /* container의 width를 상속받은 후 50프로 */
+            width: 50%;
+            margin: 10px auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">a</div>
+        <div class="box">b</div>
+    </div>
+
+
+
+</body>
+</html>

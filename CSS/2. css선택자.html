@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모든 태그에 적용한다 */
+        *{
+            color:blue;
+        }
+
+        /* div 태그에 대해 적용 */
+        div{
+            color:red;
+        }
+
+        /* class 선택자 다중 지정 가능 */
+        .my-class
+        {
+            color:brown;
+        }
+        
+        /* id는 선택자 중복: id를 부여하면 안됨 (#)  */
+        #my-id
+        {
+            color:red;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="my-class ">
+        안녕
+    </div>
+
+    <h1 class="my-class">hello</h1>
+
+    <span id="my-id">Hi</span>
+
+
+</body>
+</html>

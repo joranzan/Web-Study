@@ -1,0 +1,27 @@
+<!-- pixaby에서 다운로드 후 개발 폴더에 넣기 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- src: 이미지 경로 -->
+    <!-- alt: 이미지 안보이는 경우 대체 텍스트 -->
+    <img src="https://www.google.com/search?sxsrf=AB5stBiAMz2XlAHv5arWJ2CWFFT9grD7dA:1689564283809&q=%EC%B9%98%ED%82%A8&tbm=isch&sa=X&ved=2ahUKEwjnrti35ZSAAxVTbvUHHf_oA6IQ0pQJegQIChAB&biw=916&bih=911&dpr=1#imgrc=b2uezhNjcOqTLM" alt="맛있는 치킨">
+
+
+    <!-- 1. 절대 경로로 가져오기 -->
+    <!-- C:\Users\SSAFY\Desktop\study\chicken.jpg (변하지 않음) -->
+    <!-- 시작이 /로 시작 -> 절대값 (But! 사용하지 말장) -->
+    <img src="C:\Users\SSAFY\Desktop\study\html-study\chicken.jpg" alt="맛있는 치킨">
+    <!-- 2. 상대 경로로 가져오기 -->
+    <!-- 현재 디렉토리 기준 -->
+    <!-- ./chicken.jpg -->
+    <!-- 상위 디렉토리 -->
+    <!-- ../study/chicken.jpg -->
+    <img src="./chicken.jpg" alt="맛있는 치킨" width = "400" height="400">
+    <img src="../study/chicken.jpg" alt="맛있는 치킨" width = "400" height="400">
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hi"> hello </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+
+
+    <script>
+        //document.qeuryselector(".hi");  $: jquery에 접근할 수 있게 하는 식별자
+        const div = $(".hi");
+        console.log(div);
+        // div.addEventListener("click",콜백함수);
+        div.on('click',function()
+        {
+            alert("Hello");
+            $("body").css("backgroundColor","yellow");
+            $("body").css("color","blue");
+        })
+
+        // body 가져와서 body의 css를 변경
+        const body = document.querySelector("body");
+        body.style.backgroundColor = "red";
+    </script>
+</body>
+</html>

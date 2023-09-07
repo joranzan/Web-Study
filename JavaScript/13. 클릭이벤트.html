@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">고고</button>
+    <button onclick="gogo()">고우</button>
+    <script>
+        const btn = document.querySelector("#btn");
+
+        // btn.addEventListener("이벤트 동작", 콜백함수)
+        function gogo()
+        {
+            alert("GOGO");
+        }
+
+        btn.addEventListener('click',gogo());
+    </script>
+</body>
+</html>

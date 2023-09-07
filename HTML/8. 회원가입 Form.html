@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 양식</title>
+</head>
+<body>
+   <form>
+    <h1>회원가입 양식 만들기</h1>
+    <br>
+    <!-- ctrl + spacebar: 내부 속성 확인 -->
+    이름: <input type="text" value="" placeholder="이름을 입력하시오">
+    <br>
+    아이디: <input type="text" value="" placeholder="아이디를 입력하시오">
+    <br>
+    비밀번호: <input type="password" value="" placeholder="비밀번호를 입력하시오">
+    <br>
+    <!-- radio는 한가지만 선택 가능 ex) Gender라는 name으로 그룹화 하면 남/여 단일 선택 -->
+    <!-- 기본 체크값 설정하려면 checked -->
+    <!-- checkbox는 다중 선택 가능 ex> 좋아하는 음식 -->
+    남 <input name = "Gender" type="radio" value="남" checked>
+    여 <input name = "Gender" type="radio" value="여" >
+    <br>
+    취미
+    <!-- select의 자식 option -->
+    <select>
+        <!-- value는 나중에 보낼 때 사용되는 값 -->
+        <option value="Coding" selected>코딩 하기</option>
+        <option value="Soccer">축구 하기</option>
+        <option value="Music">음악 듣기</option>
+        <option value="Reading">책 읽기</option>
+    </select>
+    <br>
+    <!-- 서버에 제출하기 위한 제출 버튼
+        주로 form태그에서 사용하며 클릭시 새로고침 -->
+    <input type="submit" value="제출하기">
+    <!-- input type button은 버튼 만들기 -->
+   </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="city" value="서울" checked>서울
+    <input type="checkbox" name="city" value="경기도" checked>경기도
+    <input type="checkbox" name="city" value="제주도">제주도
+
+    <script>
+
+        const checkedInputs = document.querySelectorAll("input:checked");
+        const nameCityInputs = document.querySelectorAll("input[name=city]");
+        const sInput = document.querySelectorAll("input[value=서울]");
+        console.log(checkedInputs);
+        console.log(nameCityInputs);
+        console.log(sInput);
+
+    </script>
+
+
+</body>
+</html>

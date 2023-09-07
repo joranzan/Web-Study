@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //type 변환 자유로움
+        const a = 10;
+        const b = String(a);  // 형변환
+        console.log(a);
+        console.log(b);
+        console.log(typeof(a));
+        console.log(typeof(b));
+
+
+        //문자열 합치기 -> + , concat
+        const c = "abc";
+        const d = "def";
+        const e = " 알파벳 가지고 놀기"
+        const f = c+d+e;
+        const g = c.concat(d);
+        const h = c.concat(e);
+
+        console.log(f);
+        console.log(g);
+        console.log(h);
+
+        // ==와 !=   -> type 달라도 True
+        // ===와 !=== -> 타입도 같아야만 True **********
+
+        //배열 선언 방법
+        //1)
+        const arr_1 = new Array("a","b","c");
+        arr_1.push(3);
+        arr_1.push(5);
+        //2)
+        const arr_2 = ["a","b","c"];
+    </script>
+</body>
+</html>

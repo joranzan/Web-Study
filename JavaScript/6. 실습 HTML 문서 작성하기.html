@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My title</title>
+    
+</head>
+<body>
+    <h1>A heading</h1>
+    <a href="mcdonald.co.kr">Link text</a>
+
+    <script>
+        //자바 스크립트로 html 문서를 작성, 수정 가능
+        console.log(document);
+        console.log(document.children);
+        console.log(document.children[0]);
+        console.log(document.children[0].children[1].children[0]);
+        console.log(document.children[1]);
+        const h1tag = document.children[0].children[1].children[0];
+        console.log(h1tag.textContent);
+        h1tag.textContent = "어서오고";
+        </script>
+</body>
+</html>

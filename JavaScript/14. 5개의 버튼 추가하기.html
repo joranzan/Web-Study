@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .button{
+            margin : auto -8px;
+        }
+    </style>
+
+    
+</head>
+<body>
+    <!-- <button onclick="gogo(1)">버튼1</button>
+    <button onclick="gogo(2)">버튼2</button>
+    <button onclick="gogo(3)">버튼3</button>
+    <button onclick="gogo(4)">버튼4</button>
+    <button onclick="gogo(5)">버튼5</button> -->
+
+    <script>
+        
+        const body =document.querySelector('body');
+        //document
+        for( let i=0;i<5;i++)
+        {
+            const button = document.createElement('button');
+            button.textContent = " 버튼"+(i+1);
+            button.setAttribute('class', "btn");
+            body.append(button);
+        }
+
+        const buttons = document.querySelectorAll('.btn');
+        console.log(buttons);
+
+        
+
+
+        for(let i=0;i<buttons.length;i++)
+        {
+            function funC()
+            {
+                alert(buttons[i].textContent);
+            }
+            buttons[i].addEventListener('click', gogo1);
+        }
+        
+
+        function gogo1()
+        {
+            const letter="안녕";
+            alert(letter);
+        }
+
+        buttons[i].addEventListener('click', function(e)
+            {
+                e=i;
+                const letter = "버튼"+(e+1);
+                alert(letter);
+
+            });
+
+        
+
+
+    </script>
+    
+</body>
+</html>

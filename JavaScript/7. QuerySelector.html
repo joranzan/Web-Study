@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My title</title>
+    
+</head>
+<body>
+    <h1>A heading</h1>
+    <a href="mcdonald.co.kr">Link text</a>
+
+    <script>
+        //자바 스크립트로 html 문서를 작성, 수정 가능
+        // document.querySelector("선택자")
+        // querySelector: 해당 선택자를 만족하는 것 중 "단 한가지만" 가져옴
+
+        const a_tag = document.querySelector("a");
+        console.log(a_tag);
+        console.log(a_tag.textContent);
+        a_tag.textContent = "naver";
+        console.log(a_tag.href);
+        a_tag.href = "https://www.naver.com/";
+
+        //split: 문자를 기반으로 배열로 분리해주는 함수
+        const chicken = "고기|삼겹살|해산물";
+        const array = chicken.split("|");
+        console.log(array);
+
+        for(let i=0;i<array.length;i++)
+        {
+            console.log(array[i]);
+        }
+    </script>
+</body>
+</html>

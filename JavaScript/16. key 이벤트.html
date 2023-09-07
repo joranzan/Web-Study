@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="input1">
+    <div class="result1"></div>
+    <br><br>
+    <input type="text" class="input2">
+    <div class="result2"></div>
+
+    <script>
+        //<keydown keyup>
+        
+        //keydown: 키보드를 누르는 순간
+        const input1 = document.querySelector('.input1');
+        const div1  = document.querySelector('.result1');
+        input1.addEventListener('keydown', function(e){
+            
+            if(e.code==='Enter') 
+            {
+                console.log("엔터 키 금지");
+                return;
+            }
+            //event target value
+            console.log(e.target.value);
+            console.log(e);
+            div1.textContent=e.code;
+        })
+
+
+
+        //keyup: 키보드를 눌렀다 떼는 순간
+        const input2 = document.querySelector('.input2');
+        const div2  = document.querySelector('.result2');
+        input2.addEventListener('keyup', function(e)
+        {
+            console.log(e.target.value);
+            console.log(e);
+        })
+    </script>
+</body>
+</html>

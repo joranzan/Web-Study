@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            color:white;
+            border: 1px solid black;
+            background-color:white;
+            /* width: 1100px; */
+            height: 300px; 
+            padding: 20px 10px;
+            text-align: center;
+            margin: auto;
+            font-size: 100;
+        }
+        .box2{
+            color:white;
+            border: 1px solid black;
+            background-color: gray;
+            /* width: 1100px; */
+            /* height: 50px; */
+            padding: 20px 10px;
+            text-align: center;
+            margin: -30px -8px 0px -8px;
+            font-size: 100;
+        }
+        .image-wrapper{
+            /* background-image: url("이미지 경로") */
+            background-image: url(./images/profile.jpg);
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* 이미지 크기가 모자르면 이미지를 부족한만큼 반복해서 채움 */
+            /* 이미지 반복 설정 */
+            margin: 35px auto 0px auto;
+
+            background-repeat: no-repeat;
+
+
+            /* background-size 이미지 크기 설정 */
+
+            /* 1번째: contain: 가로/세로 비율을 맞춰 확대/축소 */
+             /* background-size: contain; */
+
+            /* 2번째: 배경 요소를 가득 채운다. */
+            background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <h1><div class="box2">
+            프로필 사진을 올려보자
+        </div></h1>
+        <div class="image-wrapper"></div>
+    </div>
+    
+</body>
+</html>

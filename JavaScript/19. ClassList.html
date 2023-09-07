@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .hello{
+            background-color: blue;
+        } */
+    </style>
+</head>
+<body>
+    <div>HI</div>
+
+    <script>
+        const div = document.querySelector("div");
+
+        //classList.add(문자열)
+        //해당 문자열 클래스를 추가 (이미 추가된 클래스면 무시)
+        div.classList.add('test');
+        div.classList.add('test');
+        div.classList.add('hello');
+
+        //classList.remove(문자열)
+        div.classList.remove('hello');
+
+        //classList.toggle(문자열)
+        //토글: 없다면 추가하고 있으면 없애는 것
+        div.addEventListener('click',function(){
+            div.classList.toggle('wow');
+        })
+
+        //classList.contains
+        //존재하면 true 없으면 false return
+        const isContain = div.classList.contains('test');
+        console.log(isContain);
+
+        //classList.replace
+        //클래스 이름에 띄어쓰기 있으면 안됨
+        div.classList.replace("test", "너T발C야");
+
+
+
+    </script>
+</body>
+</html>

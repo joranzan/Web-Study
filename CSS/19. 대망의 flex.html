@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* flex는 부모에서 부여한다->부모에서 자식을 관리하므로 */
+        /* flex는 Main축과 교차축이 존재 */
+        .a-wrapper{
+            display:flex;
+            /* flex-direction -> 메인축의 방향 결정 */
+            /* flex-direction이 row면 가로가 메인축 */
+            /* flex-direction이 column이면 세로가 메인축 */
+            
+            /* 개발자 도구에서 flex 속성 눈으로 확인 가능 */
+
+            /* 메인 축 정렬 justify-content*/
+            justify-content: center;
+            /* justify-content: space-between; */
+
+
+            /* 교차 축 정렬: align-items */
+            align-items: center;
+
+
+            height: 300px;
+            background-color: black;
+        }
+        .b-wrapper{
+            background-color: azure;
+            display: flex;
+            /* 가득 차도 비율을 유지하며 밀어낸다 */
+            flex-wrap: wrap;
+
+
+
+        }
+        .box{
+            width: 80px;
+            height: 80px;
+            border: 1px solid blue;
+            background-color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- .a-wrapper>.box*3 -->
+    <div class="a-wrapper">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+    </div>
+
+    <div class="b-wrapper">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+</body>
+</html>

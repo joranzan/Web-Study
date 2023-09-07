@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        fixed -> 1)width가 inline 처럼 줄어든다  2)브라우저가 기준
+        relative -> 1)현재 위치가 기준
+        absolute -> 
+        1) 부모요소가 3차원 요소를 가지고 있는 경우에 그 3차원 요소가 기준
+        2) width가 inline 처럼 줄어든다
+        (만약에 부모에 없으면) -> 그 상위로 붙는다(최종적으로 브라우저)
+        */
+        .absolute{
+            background-color: blueviolet;
+            position: absolute;
+            right:0;
+            transform:translateX(-50%);
+                   
+            
+        }
+        /* relative + absolute 조합 */
+        .parent{
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: red; 
+        }
+        .child{
+            background-color: aliceblue;
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            transform:translateY(100%);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- 부모에 3차원 요소가 없으므로 브라우저에 붙음 -->
+    <div>
+        <div class="absolute">absolute</div>
+    </div>
+
+    <div class="parent">
+        <div class="child">children</div>
+    </div>
+</body>
+</html>

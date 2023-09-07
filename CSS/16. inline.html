@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            border: 1px solid black;
+        }
+        span{
+            /* 동작 안함 ㅠ */
+            /* display:block 해야만 동작*/
+            width: 400px;
+            height: 400px;
+            /* 얘네도 제대로 동작안함 ㅠ */
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- inline 속성: span, a태그가 있다 -->
+    <!-- 줄바꿈 없이 나란히 배치 -->
+    <!-- width, height가 정상적으로 동작하지 않는다 -->
+    <!-- margin, padding이 다른 요소를 밀어내지 않는다(간격 지정 불가능) -->
+    <span>테스트</span>
+    <a href="www.naver.com">네이버</a>
+    <div>hello</div>
+ 
+</body>
+</html>

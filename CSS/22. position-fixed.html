@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모든 것에 대해 보더를 블랙으로 */
+        *{ 
+            border: 1px solid black;
+            margin: 0px;
+        }
+        .container{
+            height: 1200px;
+        }
+        .test1{
+            
+            /* position: static;을 제외한 다른 요소들을 부여하면 3차원으로 동작 */
+            /* position: static; */
+            /* position 속성을 부여하게 되면 width가 자동으로 줄어드는 특징
+            -->> 그래서 width 설정해줘야함 */
+            position: fixed;
+            width: 100%;
+            /* fixed는 웹에서 메뉴 고정할 때 사용 */
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="test1">test1</div>
+       
+    </div>
+</body>
+</html>

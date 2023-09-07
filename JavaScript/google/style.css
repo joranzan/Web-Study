@@ -1,0 +1,122 @@
+*{
+    /* border가 width에 포함 */
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+.header-nav-list-wrapper{
+    /* ul 기본으로 보이는 점 모양 */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* margin-left: auto; */
+}
+/* 자식들인 리스트에 대해서 */
+.header-nav-list-wrapper >li{
+    margin-left: 10px;
+}
+.toggle-button{
+    background-color: black;
+    color:white;
+    padding: 5px 8px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+main{
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    width: 600px;
+    height: 500px;
+    /* ************************** */
+    /* x축 y축으로 이동 */
+    transform: translate(-50%, -80%);
+    text-align: center;
+}
+.image-logo{
+    width: 272px;
+}
+.search-container{
+    position: relative;
+    margin-top: 50px;
+}
+/* input의 id */
+#search-input{
+    width: 100%;
+    height: 44px;
+    border-radius: 50px;
+    /* 돋보기 넣기 위한 padding */
+    padding-left: 40px;
+}
+.search-icon{
+    width: 17px;
+    position: absolute;
+    top: 13px;
+    left: 10px;
+}
+.bookmark-section{
+    
+    display:flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.bookmark-items{
+    margin-top: 40px;
+    width: 112px;
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* a tag 기본 속성 없애기 */
+    text-decoration: none;
+    
+    
+}
+/* 마우스를 가져다 댈 때 */
+.bookmark-items :hover{
+    cursor: pointer;
+    /* 투명도 */
+    opacity: 0.5;
+}
+.image-icon-wrapper{
+    width: 60px;
+    height: 60px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 직계가족 불러오기 */
+.image-icon-wrapper>img{
+    width: 60%;
+    height: 60%;
+}
+.bookmark-text{
+    margin-top: 5px;
+    color: black;
+}
+
+/* 다크모드용 css */
+.toggle-button-darkmode{
+    background-color: white;
+    color: black;
+}
+.body-background-darkmode{
+    background-color: black;
+}
+.img-icon.wrapper-darkmode{
+    background-color: white;
+}
+.text-darkmode{
+    color:white;
+}

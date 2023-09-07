@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            height: 2000px;
+        }
+        .total-wrapper{
+            border: 1px solid lightgray;
+            width: 100%;
+            height: 1000px;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: lightgrey;
+
+        }
+       
+        .title-wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 90%;
+            height: 100px;
+            
+        }
+        .title-box{
+            text-align: center;
+        }
+        .seperate-wrapper{
+            border: 1px solid lightgrey;
+            width: 90%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            
+        }
+        .best-new-box{
+            border: 1px solid lightgray;
+            width:90%;
+            height: 90%;
+            
+            display:flex;
+            flex-direction: column;
+            align-content: center;      
+            justify-content: space-around;
+        }
+        .topic-box
+        {
+            border: 1px solid light gray;
+            background-color: lightgrey;
+            width: 79%;
+            height: 10%;
+            
+            /* display:flex;
+            justify-content:flex-start; */
+        }
+        .topic-text-box
+        {
+            position: fixed;
+            border: 1px solid white;
+            background-color: white;
+            width: 74%;
+            height: 8%;
+            text-align:start;
+            font-weight:bold;
+            font-size: 20px;
+            margin: 0px 0px 20px 0px;
+            padding: 0px 20px;
+        }
+        .card-wrapper{
+            width: 95%;
+            height: 70%;
+            display:flex;
+            align-items: center;
+        }
+        .card-box
+        {            
+            width: 25%;
+            height: 70%;
+            margin: 10px 20px 20px 20px;
+            background-color: white;
+            padding: 10px 10px;
+        }
+        .text-box{
+            text-align: start;
+            margin: -15px 10px 10px 20px;
+        }
+        .top-follow
+        {
+            width: 50px;
+            border: 2px solid black;
+            background-color: black;
+            color:white;
+            position:fixed;
+            right: 71px;
+            bottom: 30px;
+            text-align: center;
+
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="top-follow">TOP</div>
+    <div class="total-wrapper">
+        <div class="title-wrapper">
+            <div class="title-box">
+                <h1>도서 관리 서비스에 오신 것을 환영합니다</h1>
+            </div>
+        </div>
+        <div class="seperate-wrapper">
+            <div class="best-new-box">
+                <div class="topic-box">
+                    <div class="topic-text-box">
+                        <h3>베스트 셀러 목록</h3>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card-box">
+                        <!-- 여기에 내용 입력 -->
+                        <div class="text-box">
+                            <h3>도서 제목 1</h3>저자 1 <br>
+                        Lorem ipsum dolor sit amet, concectetur adipiscing elit. Pallentsque at lacus vel neque ullamcorper tempus.
+                        </div>
+                    </div>
+                    <div class="card-box">
+                        <!-- 여기에 내용 입력 -->
+                        <div class="text-box">
+                            <h3>도서 제목 2</h3>저자 2 <br>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.  
+                        </div>              
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="seperate-wrapper">
+            <div class="best-new-box">
+                <div class="topic-box">
+                    <div class="topic-text-box">
+                        <h3>신간 도서 목록</h3>
+                    </div>
+                </div>
+                <div class="card-wrapper">
+                    <div class="card-box">
+                        <!-- 여기에 내용 입력 -->
+                        <div class="text-box">
+                            <h3>도서 제목 3</h3>저자 3 <br>
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </div>                    
+                </div>                
+            </div>
+        </div>
+
+
+    </div>
+
+    
+</body>
+</html>

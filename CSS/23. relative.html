@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span,div{
+            border-color: gray;
+            border: 1px solid black;
+        }
+
+        /* fixed -> 브라우저가 기준 */
+        /* relative -> 현재 위치 기준 */
+
+        .top{
+            position: relative;
+            top:0px;
+        }
+        .right{
+            position: relative;
+            right:0px;
+        }
+        .bottom{
+            position: relative;
+            bottom: 0px;
+        }
+        .left{
+            position: relative;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <span class="top">top</span>
+    <span class="right">right</span>
+    <span class="bottom">bottom</span>
+    <div class="left">left</div>
+</body>
+</html>
