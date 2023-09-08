@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <style>
+        .box-height{
+            height: 60px;
+        }
+    </style>
+
+</head>
+<body>
+    <button type="button" class="btn btn-danger">Error</button>
+    <button type="button" class="showbutton btn btn-primary">Show All</button>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Message</th>
+            <th scope="col">level</th>
+            <th scope="col">timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js" integrity="sha512-zoJXRvW2gC8Z0Xo3lBbao5+AS3g6YWr5ztKqaicua11xHo+AvE1b0lT9ODgrHTmNUxeCw0Ry4BGRYZfXu70weg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script>
+        const socket = io("http://localhost:8080");
+
+        const tbody = document.querySelector("tbody");
+        // [ '2023-09-08', '11:47:04', 'warn', 'warn', '메시지' ]  -> data
+        let flag =true;
+        socket.on('fromServer', (data) => {
+            
+            
+            const RecievedData = data;
+            if(flag){
+                tbody.innerHTML="";
+            for(let i=0; i<RecievedData.length;i++){
+                
+                const currentData = RecievedData[i];
+                let myStyle;
+                    if(currentData[2]==="error"){
+                        myStyle = "bg-danger-subtle";
+                    }
+                    else if(currentData[2]=="warn"){
+                        myStyle = "bg-warning-subtle";
+                    }
+                    else if(currentData[2]=="info"){
+                        myStyle = "bg-info-subtle";
+                    }
+                
+                //console.log(myStyle);
+                const tag = `
+                <tr class="box-height">
+                    <th scope="row">${i}</th>
+                    <td class="rounded">
+                        <div class="${myStyle}">
+                        <div class="ms-2"> ${currentData[3]} ${currentData[4]} </div>
+                        </div>
+                    </td>
+                    <td>${currentData[2]}</td>
+                    <td>${currentData[0]} ${currentData[1]}</td>
+                </tr>
+                `
+                tbody.insertAdjacentHTML('beforeEnd', tag);
+            }
+            }
+            
+            if(flag){
+                const button = document.querySelector("button");
+            button.addEventListener('click', function(){
+                tbody.innerHTML="";
+                for(let i=0; i<RecievedData.length;i++){
+                
+                    const currentData = RecievedData[i];
+                    let myStyle;
+                    if(currentData[2]==="error"){
+                        myStyle = "bg-danger-subtle";
+                    }
+                    else continue;
+                
+                //console.log(myStyle);
+                const tag = `
+                <tr class="box-height">
+                    <th scope="row">${i}</th>
+                    <td class="rounded">
+                        <div class="${myStyle}">
+                        <div class="ms-2"> ${currentData[3]} ${currentData[4]} </div>
+                        </div>
+                    </td>
+                    <td>${currentData[2]}</td>
+                    <td>${currentData[0]} ${currentData[1]}</td>
+                </tr>
+                `
+                tbody.insertAdjacentHTML('beforeEnd', tag);
+                flag=false;
+            }
+            })
+            }           
+        } ) 
+
+
+        const showAll = document.querySelector(".showbutton")
+        showAll.addEventListener('click', function(){
+                    flag=true;
+        })
+
+        // socket.on('fromServer', (data) => {
+        //     return data;
+        // });
+
+        socket.on('connect', () => {
+            console.log("서버와 연결되었습니다.")
+        });
+        socket.on('disconnect', () => {
+            console.log("서버와 연결이 끊어졌습니다.")
+        });
+    </script>
+</body>
+</html>
