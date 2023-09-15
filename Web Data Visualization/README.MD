@@ -26,7 +26,7 @@
 
 ### Client(/Front-end)
 
-##### 1. 계층구조 :  App.view > Home.view > UserForm, LineChart
+##### 1. 계층구조 :  `App.view > Home.view > UserForm, LineChart`
 
 ##### 2. 파일 설명
 
